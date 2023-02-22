@@ -20,15 +20,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { GenreComponent } from './genre/genre.component';
 import { SynopsisComponent } from './synopsis/synopsis.component';
 import { DirectorComponent } from './director/director.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
+  { path: 'profile', component: ProfilePageComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
 ];
 
 @NgModule({
-  declarations: [AppComponent, UserRegistrationFormComponent, UserLoginFormComponent, MovieCardComponent, WelcomePageComponent, GenreComponent, SynopsisComponent, DirectorComponent],
+  declarations: [AppComponent, UserRegistrationFormComponent, UserLoginFormComponent, MovieCardComponent, WelcomePageComponent, GenreComponent, SynopsisComponent, DirectorComponent, ProfilePageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

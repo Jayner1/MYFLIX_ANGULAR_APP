@@ -21,6 +21,7 @@ import { GenreComponent } from './genre/genre.component';
 import { SynopsisComponent } from './synopsis/synopsis.component';
 import { DirectorComponent } from './director/director.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -30,7 +31,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, UserRegistrationFormComponent, UserLoginFormComponent, MovieCardComponent, WelcomePageComponent, GenreComponent, SynopsisComponent, DirectorComponent, ProfilePageComponent],
+  declarations: [AppComponent, UserRegistrationFormComponent, UserLoginFormComponent, MovieCardComponent, WelcomePageComponent, GenreComponent, SynopsisComponent, DirectorComponent, ProfilePageComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -10,36 +10,38 @@
             <img class="card-image" [src]="movie.ImagePath" />
         </div>
         <mat-card-actions>
-            <button
-            mat-button
-            color="primary"
-            (click)="openGenreDialog(movie.Genre.Name, movie.Genre.Description)"
-          >
-            Genre
-            </button>
-            <button
-                mat-button
-                color="primary"
-                (click)="openDirectorDialog(movie.Director.Name, movie.Director.Bio, movie.Director.Birth)"
-            >
-                Director
-            </button>
-            <button
-                mat-button
-                color="primary"
-                (click)="openSynopsisDialog(movie.Title, movie.Description)"
-            >
-                Synopsis
-            </button>
-            <button
-                mat-button
-                class="mat-icon-button"
-                *ngIf="isFavorite(movie._id)"
-                (click)="removeFromFavorites(movie._id)"
-                color="primary"
-            >
-            <mat-icon>favorite_border</mat-icon>
-        </button>
-      </mat-card-actions>
-    </mat-card>
+      <button
+        mat-button
+        color="primary"
+        (click)="openSynopsisDialog(movie.Title, movie.Description)"
+      >
+        Synopsis
+      </button>
+
+      <button
+        mat-button
+        color="primary"
+        (click)="openGenreDialog(movie.Genre.Name, movie.Genre.Description)"
+      >
+        Genre
+      </button>
+
+      <button
+        mat-button
+        color="primary"
+        (click)="openDirectorDialog(movie.Director.Name, movie.Director.Bio, movie.Director.Birth)"
+      >
+        Director
+      </button>
+
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a heart icon"
+        (click)="onToggleFavMovie(movie._id)"
+      >
+        <mat-icon class="favIcon">{{favoriteMovies.includes(movie._id) ? 'favorite' : 'favorite_border'}}</mat-icon>
+      </button>
+    </mat-card-actions>
+  
+  </mat-card>
 </div>

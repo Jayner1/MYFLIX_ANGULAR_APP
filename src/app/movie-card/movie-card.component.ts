@@ -13,7 +13,7 @@ import { SynopsisComponent } from '../synopsis/synopsis.component';
   styleUrls: ['./movie-card.component.scss']
 })
 
-export class MovieCardComponent {
+export class MovieCardComponent implements OnInit {
   movies: any[] = [];
   favorites: any[] = [];
   constructor(
@@ -68,6 +68,7 @@ getMovies(): void {
       this.ngOnInit();
     });
   }
+  
 
   openGenreDialog(name: string, description: string): void {
     this.dialog.open(GenreComponent, {

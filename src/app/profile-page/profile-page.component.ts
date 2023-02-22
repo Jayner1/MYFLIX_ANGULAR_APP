@@ -9,7 +9,7 @@ import { Router } from '@angular/router'; // Routing
   templateUrl: './profile-page.component.html',
   styleUrls: ['./profile-page.component.scss']
 })
-export class ProfilePageComponent {
+export class ProfilePageComponent implements OnInit{
     user: any = {};
     initialInput: any = {};
     @Input() updatedUser = {

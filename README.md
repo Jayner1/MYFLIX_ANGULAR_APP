@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
 
+## Key features
+
+- The app should display a welcome view where users will be able to either log in or register an account.
+- Once authenticated, the user should now view all movies.
+- Upon clicking on a particular movie, users will be taken to a single movie view, where additional movie details will be displayed.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
